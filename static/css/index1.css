@@ -1,0 +1,181 @@
+body{
+  background-color: #eee8f5;
+  /* background-color: white; */
+    color:black;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 30px 13px 20px rgba(31, 24, 243, 0.158);
+  z-index: -1;
+  position: relative;
+  top:3.5rem;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  color:black;
+  text-align:justify;
+}
+
+#form
+{
+  position:relative;
+  width:500px;
+  display:flex;
+  justify-content:space-around;
+  min-height: 80vh;
+  left:-4rem;
+  /* background-color: whitesmoke;
+  border-radius: 10px; */
+}
+
+#new{
+  width: 20rem;
+}
+
+#mer{
+	background-color:  white;
+    height: 5.3rem;	
+	border: 3px solid #7209b7;
+}
+  #mer1{
+	background-color: white;
+	position: relative;
+	top:0rem;
+	height: 5.3rem;
+    border: 3px solid #7209b7;
+  }
+#space{
+  position: absolute;
+  width: 700px;
+  top:103rem;
+  left:1rem;
+color:black;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* or justify-content: space-around; */
+  width: 300px; /* Set the width according to your preference */
+  margin: 0px auto; /* Centers the buttons horizontally */
+}
+.button-container button {
+  width: 200px; /* Set the width of each button */
+  height: 50px; /* Set the height of each button */
+}
+/* #res{
+  position: absolute;
+  top:90rem;
+} */
+
+
+#mail {
+  position: relative;
+  width: 60rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 110rem;
+  left:5rem;
+}
+
+#jer {
+	display: flex;
+	list-style: none;
+	padding-left: 33rem;
+  }
+  
+  #jer .nav-item {
+	margin-right: 200px;
+  }
+  
+  #jer .nav-item:last-child {
+	margin-right: 90px;
+  }
+  
+
+label {
+  font-weight: bold;
+}
+
+
+
+input[type="email"] {
+  width: 28rem;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid black 5px;
+}
+
+input[type="email"]:hover {
+  border: 5px solid purple;
+}
+
+
+
+h1 {
+  margin-top: 20px;
+}
+
+
+/* .form {
+  max-width: 400px;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */
+
+/* Style for form groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label styles */
+.form-group label,.mail {
+  display: block;
+  font-weight: bold;
+}
+
+/* form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+/* label {
+  font-weight: bold;
+} */
+
+input[type="text"] {
+  width: 28rem;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid black 5px;
+}
+
+input[type="text"]:hover {
+  border: 7px solid purple;
+}
+
+
+
+
+/* h1 {
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: center;
+} */

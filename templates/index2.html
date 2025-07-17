@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fraud Detection In Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static\css\index1.css">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script> 
+    <style>
+        #coli {
+            color: black;
+        }
+        #btn1 {
+            border-radius: 30px;
+            font-weight: bolder;
+        }
+        .form-label {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" id="mer">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="jer">
+          <li class="nav-item"><a href="/">
+            <lord-icon
+            src="https://cdn.lordicon.com/wmwqvixz.json"
+            trigger="hover"
+            colors="primary:#6c16c7"
+            style="width:4rem;height:4rem" >
+        </lord-icon></a>
+</li>
+<li class="nav-item">
+<a href="/rules"><lord-icon
+            src="https://cdn.lordicon.com/mjcariee.json"
+            trigger="hover"
+            colors="primary:#6c16c7"
+            style="width:4rem;height:4rem">
+        </lord-icon></a>
+          </li>
+         
+          <!-- <li class="nav-item">
+            <a href="/about">   <lord-icon
+              src="https://cdn.lordicon.com/jnzhohhs.json"
+              trigger="hover"
+              colors="primary:#6c16c7"
+              style="width:4rem;height:4rem">
+          </lord-icon></a></li> -->
+          <li class="nav-item">
+            <a href="/graph">   <lord-icon
+              src="https://cdn.lordicon.com/uwinmnkh.json"
+              trigger="morph"
+              colors="primary:#6c16c7"
+              state="morph-analytics-1"
+              style="width:4rem;height:4rem">
+          </lord-icon></a></li>
+        </ul>
+       
+      </div>
+    </div>
+  </nav><br>
+        <h1><center>Counterfeiting Detection Of Banking</center></h1>
+        <h3><center>Enter the Transaction Details</center></h3>
+        <div class="container" id="form">
+        <form action="/predict1" method="get" id="new">
+          <label for="feature1" class="form-label">Time</label>
+          <input type="text" class="form-control" id="feature1" name="feature1" required>
+          <br>
+  
+          <label for="feature2" class="form-label">Account Number</label>
+          <input type="text" class="form-control" id="feature2" name="feature2" required>
+          <br>
+  
+          <label for="feature3" class="form-label">CreditCard Number</label>
+          <input type="text" class="form-control" id="feature3" name="feature3" required>
+          <br>
+  
+          <label for="feature4" class="form-label">Transaction Date</label>
+          <input type="text" class="form-control" id="feature4" name="feature4" required>
+          <br>
+  
+          <label for="feature5" class="form-label">Transaction Location </label>
+          <input type="text" class="form-control" id="feature5" name="feature5" required>
+          <br>
+  
+          <label for="feature6" class="form-label">Credit Limit</label>
+          <input type="text" class="form-control" id="feature6" name="feature6" required>
+          <br>
+  
+          <label for="feature7" class="form-label">Transaction Category</label>
+          <input type="text" class="form-control" id="feature7" name="feature7" required>
+          <br>
+  
+          <label for="feature8" class="form-label">Transaction ID</label>
+          <input type="text" class="form-control" id="feature8" name="feature8" required>
+          <br>
+  
+          <label for="feature9" class="form-label">Card Expiry Date</label>
+          <input type="text" class="form-control" id="feature9" name="feature9" required>
+          <br>
+  
+          <label for="feature10" class="form-label">Card CVV</label>
+          <input type="text" class="form-control" id="feature10" name="feature10" required>
+          <br>
+  
+          <!--<label for="feature11" class="form-label">AccountType</label>
+          <input type="text" class="form-control" id="feature11" name="feature11" required>
+          <br>-->
+  
+          <label for="feature12" class="form-label">Transaction Amount</label>
+          <input type="text" class="form-control" id="feature12" name="feature12" required>
+          <br>
+                <br>
+                <div class="button-container">
+                <button type="submit" class="btn btn-outline-dark btn-lg" id="btn1">Predict</button><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="/graph"><button type="button" class="btn btn-outline-dark btn-lg"  id="btn1">DatasetGraph</button></a>              
+              </div>           
+              </form>
+                
+                <div  class="container" id="space">
+                  
+                {% if request.method == 'GET' %}
+                    {% if result == 0%}
+                        <h1><span>Result:- Legitimate-Transaction</span></h1>
+                        
+                    {% endif %}
+                    {% if result == 1 %}
+                        <h1>Result:- Fraudulent-Transaction</h1>
+                      </div>  
+                        <div class="container" id="mail">            
+                          <form action="{{ url_for('send_email') }}" method="POST">
+                            <label for="recipient">Recipient Email:</label><br>
+                            <input type="email" id="recipient" name="recipient" required><br><br>
+                            
+                            <button type="submit" class="btn btn-outline-dark btn-lg" id="btn1">Send Mail</button>
+                            <h1>{{ans}}</h1>
+                        </form>
+                      </div> 
+                    {% endif %}
+                    {% if error is defined %}
+                        <h1>Error: {{ error }}</h1>
+                    {% endif %}
+                {% endif %}
+               
+         
+</div></div>
+
+</body>
+</html>
